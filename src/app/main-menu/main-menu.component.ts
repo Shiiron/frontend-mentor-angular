@@ -1,17 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main-menu',
   templateUrl: './main-menu.component.html',
-  styleUrls: ['./main-menu.component.scss']
+  styleUrls: ['./main-menu.component.scss'],
 })
 export class MainMenuComponent implements OnInit {
-  menuItems: string[] = [];
+  constructor(private route: ActivatedRoute) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.menuItems = ['00 Home', 'O1 Destination', '02 Crew', '03 Technology'];
-  }
-
+  ngOnInit(): void {}
 }
