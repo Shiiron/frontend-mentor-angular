@@ -3,22 +3,25 @@
     <img class="logo" src="../../assets/img/shared/logo.svg" />
   </div>
 
-  <nav>
-    <ul class="primary-navigation flex">
+  <button class="mobile-nav-toggle" nav-expanded="not-expanded" (click)="toggleNav()">
+  </button>
+
+  <nav class="main-nav">
+    <ul class="primary-navigation underline-indicators flex" data-visible="not-visible">
       <li class="primary-navigation-item">
-        <a class="color-white" routerLink="/"><span>00</span> Home</a>
+        <a class="text-white active" routerLink="/"><span aria-hidden="true">00</span> Home</a>
       </li>
-      <li>
-        <a class="color-white" routerLink="/destination"
-          ><span>01</span> Destination</a
+      <li class="primary-navigation-item">
+        <a class="text-white" routerLink="/destination"
+          ><span aria-hidden="true">01</span> Destination</a
         >
       </li>
-      <li>
-        <a class="color-white" routerLink="/crew"><span>02</span> Crew</a>
+      <li class="primary-navigation-item">
+        <a class="text-white" routerLink="/crew"><span aria-hidden="true">02</span> Crew</a>
       </li>
-      <li>
-        <a class="color-white" routerLink="/technology"
-          ><span>03</span> Technology</a
+      <li class="primary-navigation-item">
+        <a class="text-white" routerLink="/technology"
+          ><span aria-hidden="true">03</span> Technology</a
         >
       </li>
     </ul>

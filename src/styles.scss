@@ -1,6 +1,4 @@
 @import "./assets/reset.scss";
-@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
 
 html {
   height: 100%;
@@ -10,12 +8,14 @@ html {
 }
 
 body {
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  display: grid;
 }
 
 .heading-1 {
   font-size: 15rem;
+  line-height: 17rem;
+  font-family: "Bellefair";
 }
 
 .heading-2 {
@@ -32,8 +32,9 @@ body {
 
 .heading-5 {
   font-size: 2.8rem;
-  font-family: "Barlow Condensed";
+  font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 0.475rem;
+  font-weight: 400;
 }
 
 .subheading-1 {
@@ -42,8 +43,12 @@ body {
 
 .subheading-2 {
   font-size: 1.4rem;
-  font-family: "Barlow Condensed";
+  font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 0.235rem;
+}
+
+.main-nav {
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 /* Utilies classes */
@@ -53,6 +58,21 @@ body {
   gap: 2rem;
 }
 
-.color-white {
+.text-white {
   color: white;
+}
+
+.text-black {
+  color: black;
+}
+
+.body-typo {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
