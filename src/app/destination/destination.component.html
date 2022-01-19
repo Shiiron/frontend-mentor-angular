@@ -1,1 +1,37 @@
-<p>destination works!</p>
+<div class="grid-container">
+    <div>
+      <h1 class="heading-5 text-white uppercase" style="padding-bottom: 9rem;"><span>01</span> Pick your destination</h1>
+      <img [src]="selectedDestination.images.png" />
+    </div>
+
+    <div>
+      <ul class="destination-nav text-white flex font-barlow">
+          <li *ngFor="let destination of destinations" (click)="this.selectedDestination = destination">
+              {{ destination.name }}
+          </li>
+      </ul>
+
+      <h2 class="heading-2 uppercase text-white">{{ selectedDestination.name }}</h2>
+
+      <p class="text-white body-typo">
+          {{ selectedDestination.description }}
+      </p>
+
+      <hr>
+
+      <div class="text-white flex info uppercase">
+        <div>
+            <h3 class="subheading-2">Avg. Distance</h3>
+            <p class="subheading-1 destination-spacing">
+                {{ selectedDestination.distance }}
+            </p>
+        </div>
+        <div>
+            <h3 class="subheading-2">Est. travel time</h3>
+            <p class="subheading-1 destination-spacing">
+                {{ selectedDestination.travel }}
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
