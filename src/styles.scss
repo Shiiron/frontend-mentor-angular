@@ -74,8 +74,16 @@ body {
   color: white;
 }
 
+.bg-white {
+  background-color: hsl(0 0% 100%);
+}
+
 .text-black {
   color: black;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .body-typo {

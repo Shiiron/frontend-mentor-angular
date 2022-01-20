@@ -1,16 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface Image {
-  png: string;
-  webp: string;
-}
-export interface Destination {
-  name: string;
-  images: Image;
-  description: string;
-  distance: string;
-  travel: string;
-}
+import { Destination } from '../models/destination';
 
 @Component({
   selector: 'app-destination',

@@ -1,1 +1,16 @@
-<p>crew works!</p>
+<div class="grid-container">
+    <div class="text-white crew-info">
+      <h1 class="crew-title uppercase heading-5"><span class="opacity-50">02</span> Meet your crew</h1>
+      <h3 class="font-bellefair heading-4 uppercase opacity-50">{{ selectedCrew.role }}</h3>
+      <h4 class="crew-name uppercase">{{ selectedCrew.name }}</h4>
+
+      <p class="body-typo font-barlow">{{ selectedCrew.bio }}</p>
+      <ul class="button-list">
+          <li *ngFor="let crewMember of crew;" class="small-button bg-white" [ngClass]="selectedCrew === crewMember ? '' : 'opacity-50'" (click)="selectedCrew = crewMember"></li>
+      </ul>
+    </div>
+
+    <div class="crew-img-container">
+      <img [src]="selectedCrew.images.png">
+    </div>
+</div>
