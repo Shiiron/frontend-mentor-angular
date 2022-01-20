@@ -9,6 +9,8 @@ import { CrewComponent } from './crew/crew.component';
 import { TechnologyComponent } from './technology/technology.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 
+import { DataService } from './services/data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

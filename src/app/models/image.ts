@@ -1,4 +1,4 @@
 export interface Image {
-    png: string;
-    webp: string;
-  }
+  png: string;
+  webp: string;
+}
