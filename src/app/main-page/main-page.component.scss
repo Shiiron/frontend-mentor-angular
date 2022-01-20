@@ -3,7 +3,7 @@
   z-index: 1;
   display: inline-grid;
   place-items: center;
-  padding: 5rem;
+  padding: 7rem;
   border-radius: 50%;
   aspect-ratio: 1;
   text-decoration: none;
@@ -30,4 +30,8 @@
 .heading-padding {
   display: block;
   padding-block: 2.4rem;
+}
+
+.explore-button {
+  justify-self: end;
 }
