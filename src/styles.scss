@@ -112,15 +112,16 @@ img {
 }
 
 /* layout */
-.grid-container {
-  display: grid;
-  text-align: center;
-  place-items: center;
-  height: 100%;
+.d-block {
+  display: block;
 }
 
-grid-container * {
-  max-width: 50ch;
+.grid-container {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  height: 100%;
 }
 
 .background {
@@ -166,9 +167,15 @@ grid-container * {
   }
 }
 
+@media (min-width: 35em) and (max-width: 55em) {
+  .grid-container * {
+    max-width: 80ch;
+  }
+}
+
 @media (min-width: 45em) {
   .grid-container {
-    gap: 3.6rem;
+    column-gap: 4rem;
     text-align: left;
     grid-template-columns:
       minmax(1rem, 1fr)
