@@ -53,12 +53,10 @@
   border-color: hsl(0 0 100% / 0.5);
 }
 
-.underline-indicators > .active,
-.underline-indicators > [aria-selected="true"] {
+.underline-indicators > .active {
   color: hsl(0 0 100% / 1);
   border-color: hsl(0 0 100% / 1);
 }
-/**/
 
 @media (min-width: 35em) and (max-width: 55em) {
   .primary-navigation a > span {

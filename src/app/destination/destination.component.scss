@@ -28,10 +28,10 @@
   padding-inline: 1.6rem;
 }
 
-hr {
+.separator {
   margin-block: 3.2rem;
-  width: 90%;
-  color: #383b4b;
+  width: 100%;
+  background-color: #383b4b;
   height: 1px;
 }
 
@@ -60,11 +60,15 @@ hr {
   .destination-nav {
     justify-content: start;
     list-style: none;
-    padding-bottom: 3.5rem;
     letter-spacing: 0.27rem;
+    border: 0;
+    color: hsl(0 0 100% / 1);
     li {
-      &:hover {
-        cursor: pointer;
+      padding-block: 0 2rem;
+      cursor: pointer;
+      &:not(.destination-active):hover {
+        border-bottom: 0.5rem solid hsl(0 0 100% / 0.5);
+        border-color: hsl(0 0 100% / 0.5);
       }
       gap: 4rem;
       font-size: 1.6rem;
@@ -74,6 +78,11 @@ hr {
     }
   }
 
+  .destination-active {
+    border-bottom: 0.5rem solid hsl(0 0 100% / 0);
+    border-color: hsl(0 0 100% / 1);
+  }
+
   .destination--image {
     max-width: 100%;
     grid-column: 2;
@@ -81,5 +90,13 @@ hr {
 
   .destination--title {
     grid-column: 2 / span 2;
+  }
+
+  .destination--description {
+    padding-inline: 0;
+  }
+
+  .separator {
+    margin-block: 5.4rem 2.8rem;
   }
 }

@@ -4,7 +4,9 @@
 
     <div>
       <ul class="destination-nav text-white flex font-barlow">
-          <li class="uppercase text-light" *ngFor="let destination of destinations" (click)="this.selectedDestination = destination">
+          <li class="uppercase text-light" [ngClass]="this.selectedDestination === destination ? 'destination-active' : ''"
+            *ngFor="let destination of destinations"
+            (click)="this.selectedDestination = destination">
               {{ destination.name }}
           </li>
       </ul>
@@ -15,7 +17,7 @@
           {{ selectedDestination.description }}
       </p>
 
-      <hr>
+      <div class="separator"></div>
 
       <div class="text-white flex destination--info uppercase">
         <div>
