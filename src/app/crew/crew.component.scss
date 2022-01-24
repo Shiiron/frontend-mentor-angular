@@ -3,6 +3,15 @@
   width: 1.5rem;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 300ms ease-in;
+  background-color: hsla(0, 0, 100, 0.3);
+  &:hover {
+    background-color: hsla(0, 0, 100, 0.6);
+  }
+}
+
+.small-button-active {
+  background-color: hsla(0, 0, 100, 1);
 }
 
 .button-list {
@@ -124,6 +133,6 @@
   }
 
   .grid--crew {
-    grid-template-columns: 2rem minmax(30rem, 1fr) minmax(20rem, max-content) 5rem !important;
+    grid-template-columns: 15rem minmax(30rem, 1fr) minmax(20rem, max-content) 15rem !important;
   }
 }

@@ -6,10 +6,11 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { TechnologyComponent } from './technology/technology.component';
 
 const routes: Routes = [
-  { path: '', component: MainPageComponent },
+  { path: 'home', component: MainPageComponent },
   { path: 'destination', component: DestinationComponent },
   { path: 'crew', component: CrewComponent },
   { path: 'technology', component: TechnologyComponent },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

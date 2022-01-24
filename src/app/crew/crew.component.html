@@ -10,7 +10,7 @@
 
       <p class="body-typo font-barlow crew--bio text-light">{{ selectedCrew.bio }}</p>
       <ul class="button-list button-list--not-mobile">
-          <li *ngFor="let crewMember of crew;" class="small-button bg-white" [ngClass]="selectedCrew === crewMember ? '' : 'opacity-50'" (click)="selectedCrew = crewMember"></li>
+          <li *ngFor="let crewMember of crew;" class="small-button" [ngClass]="selectedCrew === crewMember ? 'small-button-active' : ''" (click)="selectedCrew = crewMember"></li>
       </ul>
     </div>
 

@@ -171,9 +171,9 @@ grid-container > * {
     gap: 3.6rem;
     text-align: left;
     grid-template-columns:
-      minmax(2rem, 5rem)
+      minmax(2rem, 15rem)
       repeat(2, minmax(0, 1fr))
-      minmax(2rem, 5rem);
+      minmax(2rem, 15rem);
   }
 
   .grid-container > *:first-child {

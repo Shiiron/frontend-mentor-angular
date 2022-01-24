@@ -4,13 +4,17 @@
 
 .list-item {
   gap: 3rem;
-  border: 1px solid hsl(0 0 100% / 0.5);
+  transition: border 300ms ease-in;
+  border: 1px solid hsl(0 0 100% / 0.2);
   border-radius: 50%;
   aspect-ratio: 1;
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover:not(.list-item-active) {
+    border: 1px solid hsl(0 0 100% / 1);
+  }
 }
 
 .list-item-active {
