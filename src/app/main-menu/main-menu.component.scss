@@ -41,10 +41,9 @@
   display: none;
 }
 
-/*
 .underline-indicators > * {
   cursor: pointer;
-  padding: var(--underline-gap, 1rem) 0;
+  padding-block: 3.8rem;
   border: 0;
   border-bottom: 0.5rem solid hsl(0 0 100% / 0);
 }
@@ -70,7 +69,6 @@
 @media (min-width: 35em) {
   .primary-navigation {
     gap: 3rem;
-    padding-block: 2.8rem;
     padding-inline: clamp(4rem, 10vw, 15rem);
   }
 }
@@ -108,5 +106,11 @@
 
   .mobile-nav-toggle[nav-expanded="expanded"] {
     background-image: url("../../assets/img/shared/icon-close.svg");
+  }
+}
+
+@media (min-width: 45em) {
+  .primary-header {
+    margin-top: 3rem;
   }
 }

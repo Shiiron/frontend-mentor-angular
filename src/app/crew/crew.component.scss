@@ -73,7 +73,8 @@
 
   .crew-title {
     justify-self: start;
-    padding-block: 3rem 6rem;
+    align-self: end;
+    padding-block: 3rem;
     padding-inline: 4rem;
   }
 
@@ -99,6 +100,30 @@
   }
 
   .crew-info {
+    grid-column: 2;
     gap: 3rem;
+    width: 100%;
+  }
+
+  .crew-title {
+    grid-column: 2;
+  }
+
+  .crew-image {
+    max-height: 100%;
+    grid-row: 1 / span 2;
+    max-width: 100%;
+  }
+
+  .crew--bio {
+    padding-inline: 0;
+  }
+
+  .button-list {
+    justify-content: start;
+  }
+
+  .grid--crew {
+    grid-template-columns: 2rem minmax(30rem, 1fr) minmax(20rem, max-content) 5rem !important;
   }
 }
