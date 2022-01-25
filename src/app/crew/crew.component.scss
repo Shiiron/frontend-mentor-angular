@@ -1,0 +1,138 @@
+.small-button {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 300ms ease-in;
+  background-color: hsla(0, 0, 100, 0.3);
+  &:hover {
+    background-color: hsla(0, 0, 100, 0.6);
+  }
+}
+
+.small-button-active {
+  background-color: hsla(0, 0, 100, 1);
+}
+
+.button-list {
+  justify-content: center;
+  gap: 2.4rem;
+  padding-bottom: 3.2rem;
+}
+
+.button-list--mobile {
+  display: flex;
+}
+
+.button-list--not-mobile {
+  display: none;
+}
+
+.crew-info {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+}
+
+.crew-title {
+  align-self: start;
+}
+
+.crew-name {
+  padding-block: 1rem;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.crew-image {
+  display: none;
+}
+
+.crew-image--mobile {
+  display: block;
+  height: fit-content;
+  max-width: 50%;
+  padding-block: 3.2rem;
+}
+
+.crew--bio {
+  max-width: 60ch;
+  padding-inline: 2rem;
+}
+
+@media (min-width: 35em) {
+  .crew-image--mobile {
+    display: none;
+  }
+
+  .button-list--mobile {
+    display: none;
+  }
+
+  .button-list--not-mobile {
+    display: flex;
+  }
+
+  .crew-image {
+    display: block;
+    align-self: end;
+    max-width: 50%;
+  }
+
+  .crew-title {
+    justify-self: start;
+    align-self: end;
+    padding-block: 3rem;
+    padding-inline: 4rem;
+  }
+
+  .crew-name {
+    font-size: 4rem;
+    line-height: 4.6rem;
+    padding-block: 1rem 1.6rem;
+  }
+
+  .crew-info {
+    padding-bottom: 0;
+  }
+
+  .crew--bio {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 45em) {
+  .crew-name {
+    font-size: 6.4rem;
+    line-height: auto;
+  }
+
+  .crew-info {
+    grid-column: 2;
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .crew-title {
+    grid-column: 2;
+  }
+
+  .crew-image {
+    max-height: 90%;
+    grid-row: 1 / span 2;
+    max-width: 100%;
+  }
+
+  .crew--bio {
+    padding-inline: 0;
+  }
+
+  .button-list {
+    justify-content: start;
+  }
+
+  .grid--crew {
+    grid-template-columns: 5rem minmax(30rem, 1fr) minmax(40%, 1fr) 5rem !important;
+  }
+}

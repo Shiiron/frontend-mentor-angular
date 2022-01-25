@@ -1,0 +1,124 @@
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primary-navigation {
+  gap: clamp(1.5rem, 5vw, 3.5rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: hsl(0 0% 0% / 0.5);
+}
+
+@supports (backdrop-filter: blur(2rem)) {
+  .primary-navigation {
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(2rem);
+  }
+}
+
+.primary-navigation a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+
+  [aria-hidden="true"] {
+    font-weight: 700;
+    margin-inline-end: 0.5rem;
+  }
+}
+
+.primary-navigation-item {
+  cursor: pointer;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.underline-indicators > * {
+  cursor: pointer;
+  padding-block: 3.8rem;
+  border: 0;
+  border-bottom: 0.5rem solid hsl(0 0% 100% / 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl(0 0% 100% / 0.5);
+}
+
+.underline-indicators > .active {
+  color: hsl(0 0% 100% / 1);
+  border-color: hsl(0 0% 100% / 1);
+}
+
+@media (min-width: 35em) and (max-width: 55em) {
+  .primary-navigation a > span {
+    display: none;
+  }
+}
+
+@media (min-width: 35em) {
+  .primary-navigation {
+    padding-inline: clamp(3rem, 7vw, 7rem);
+  }
+}
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 30%;
+    padding: min(30vh, 12rem) 2em;
+    flex-direction: column;
+    gap: 4em;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
+
+  .primary-navigation[data-visible="visible"] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    background-image: url("../../assets/img/shared/icon-hamburger.svg");
+    width: 2.6rem;
+    border: 0;
+    background-repeat: no-repeat;
+    aspect-ratio: 1;
+    top: 3.4rem;
+    right: 3.4rem;
+    z-index: 9999;
+  }
+
+  .mobile-nav-toggle[nav-expanded="expanded"] {
+    background-image: url("../../assets/img/shared/icon-close.svg");
+  }
+}
+
+@media (min-width: 45em) {
+  .primary-header {
+    margin-top: 3rem;
+    justify-content: start;
+  }
+
+  .header-line {
+    height: 1px;
+    background: #979797;
+    width: auto;
+    display: flex;
+    flex-grow: 1;
+    margin-right: -5rem;
+  }
+}

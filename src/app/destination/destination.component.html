@@ -1,0 +1,37 @@
+<div class="grid-container">
+    <h1 class="heading-5 text-white uppercase destination--title"><span class="opacity-25">01</span> Pick your destination</h1>
+    <img class="destination--image" [src]="selectedDestination.images.png" />
+
+    <div>
+      <ul class="destination-nav text-white flex font-barlow">
+          <li class="uppercase text-light" [ngClass]="this.selectedDestination === destination ? 'destination-active' : ''"
+            *ngFor="let destination of destinations"
+            (click)="this.selectedDestination = destination">
+              {{ destination.name }}
+          </li>
+      </ul>
+
+      <h2 class="heading-2 uppercase text-white">{{ selectedDestination.name }}</h2>
+
+      <p class="text-light body-typo destination--description">
+          {{ selectedDestination.description }}
+      </p>
+
+      <div class="separator"></div>
+
+      <div class="text-white flex destination--info uppercase">
+        <div>
+            <h3 class="subheading-2 text-light">Avg. Distance</h3>
+            <p class="subheading-1 destination-spacing">
+                {{ selectedDestination.distance }}
+            </p>
+        </div>
+        <div>
+            <h3 class="subheading-2 text-light">Est. travel time</h3>
+            <p class="subheading-1 destination-spacing">
+                {{ selectedDestination.travel }}
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
