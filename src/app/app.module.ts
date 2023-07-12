@@ -10,6 +10,8 @@ import { TechnologyComponent } from './technology/technology.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 
 import { DataService } from './services/data.service';
+import { ProjectListComponent } from './project-list/project-list.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { DataService } from './services/data.service';
     DestinationComponent,
     CrewComponent,
     TechnologyComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    ProjectListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
