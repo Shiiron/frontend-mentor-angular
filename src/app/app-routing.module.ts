@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CrewComponent } from './crew/crew.component';
-import { DestinationComponent } from './destination/destination.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { TechnologyComponent } from './technology/technology.component';
+import { CrewComponent } from './space-tourism/crew/crew.component';
+import { DestinationComponent } from './space-tourism/destination/destination.component';
+import { MainPageComponent } from './space-tourism/main-page/main-page.component';
+import { TechnologyComponent } from './space-tourism/technology/technology.component';
 import { ProjectListComponent } from './project-list/project-list.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './space-tourism/home/home.component';
 
 const routes: Routes = [
   { path: 'projects', component: ProjectListComponent },

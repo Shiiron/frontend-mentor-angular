@@ -3,15 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { DestinationComponent } from './destination/destination.component';
-import { CrewComponent } from './crew/crew.component';
-import { TechnologyComponent } from './technology/technology.component';
-import { MainMenuComponent } from './main-menu/main-menu.component';
+import { MainPageComponent } from './space-tourism/main-page/main-page.component';
+import { DestinationComponent } from './space-tourism/destination/destination.component';
+import { CrewComponent } from './space-tourism/crew/crew.component';
+import { TechnologyComponent } from './space-tourism/technology/technology.component';
+import { MainMenuComponent } from './space-tourism/main-menu/main-menu.component';
 
-import { DataService } from './services/data.service';
+import { DataService } from './space-tourism/services/data.service';
 import { ProjectListComponent } from './project-list/project-list.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './space-tourism/home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +22,10 @@ import { HomeComponent } from './home/home.component';
     TechnologyComponent,
     MainMenuComponent,
     ProjectListComponent,
-    HomeComponent
+    HomeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [DataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

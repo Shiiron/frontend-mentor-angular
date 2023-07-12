@@ -5,7 +5,7 @@ import { DataService } from '../services/data.service';
 @Component({
   selector: 'app-crew',
   templateUrl: './crew.component.html',
-  styleUrls: ['./crew.component.scss']
+  styleUrls: ['./crew.component.scss'],
 })
 export class CrewComponent implements OnInit {
   crew: Crew[] = [];
@@ -19,5 +19,4 @@ export class CrewComponent implements OnInit {
     this.crew = this.dataService.getCrewList();
     this.selectedCrew = this.crew[0];
   }
-
 }
