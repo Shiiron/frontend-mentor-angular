@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
-import { Technology } from 'src/app/space-tourism/models/technology';
+import { Technology } from '../models/technology';
 
 @Component({
   selector: 'app-technology',
