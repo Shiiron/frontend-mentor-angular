@@ -1,9 +1,5 @@
-<div class="font-nunito-sans">
-  <app-country-list-header></app-country-list-header>
-
-  <div class="list-items">
-    <ng-container *ngFor="let country of countries">
-      <app-country-card [country]="country"></app-country-card>
-    </ng-container>
-  </div>
+<div class="list-items">
+  <ng-container *ngFor="let country of countries">
+    <app-country-card [country]="country"></app-country-card>
+  </ng-container>
 </div>

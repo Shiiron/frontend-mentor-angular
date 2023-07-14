@@ -16,6 +16,7 @@ import { TechnologyComponent } from './project-list/space-tourism/technology/tec
 import { CountryService } from './project-list/country-list/services/country.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CountryListHeaderComponent } from './project-list/country-list/components/country-list-header/country-list-header.component';
+import { CountryHomeComponent } from './project-list/country-list/pages/country-home/country-home.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CountryListHeaderComponent } from './project-list/country-list/componen
     HomeComponent,
     CountryListComponent,
     CountryDetailComponent,
+    CountryHomeComponent,
   ],
   providers: [DataService, CountryService],
   bootstrap: [AppComponent],

@@ -8,6 +8,7 @@ import { CrewComponent } from './project-list/space-tourism/crew/crew.component'
 import { TechnologyComponent } from './project-list/space-tourism/technology/technology.component';
 import { CountryListComponent } from './project-list/country-list/pages/country-list/country-list.component';
 import { CountryDetailComponent } from './project-list/country-list/pages/country-detail/country-detail.component';
+import { CountryHomeComponent } from './project-list/country-list/pages/country-home/country-home.component';
 
 const routes: Routes = [
   { path: 'projects', component: ProjectListComponent },
@@ -23,8 +24,9 @@ const routes: Routes = [
   },
   {
     path: 'country-list',
-    component: CountryListComponent,
+    component: CountryHomeComponent,
     children: [
+      { path: 'list', component: CountryListComponent },
       {
         path: ':countryCode',
         component: CountryDetailComponent,
