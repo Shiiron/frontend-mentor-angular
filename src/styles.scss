@@ -1,10 +1,14 @@
 @import "./assets/reset.scss";
+@import './assets/country_list.scss';
+
+/********************************
+    Space tourism web project
+********************************/
 
 html {
   height: 100%;
   width: 100%;
   font-size: 62.5%; // For easy use of rem
-  font-family: "Bellefair";
 }
 
 body {
@@ -248,3 +252,4 @@ img {
     background-image: url("./assets/img/technology/background-technology-desktop.jpg");
   }
 }
+
