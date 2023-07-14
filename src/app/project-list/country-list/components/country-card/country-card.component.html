@@ -1,1 +1,11 @@
-<p>country-card works!</p>
+<div class="country-card" routerLink="./{{ country?.cioc }}">
+  <img src="{{ country?.flags?.svg }}" />
+  <div class="country-infos">
+    <h3 class="country-title">{{ country?.name?.common }}</h3>
+    <div class="country-subinfo">
+      <span><label>Population:</label> {{ country?.population }}</span>
+      <span><label>Region:</label> {{ country?.region }}</span>
+      <span><label>Capital:</label> {{ country?.capital?.join(",") }}</span>
+    </div>
+  </div>
+</div>

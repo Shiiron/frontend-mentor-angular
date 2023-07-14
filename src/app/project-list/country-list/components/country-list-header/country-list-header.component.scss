@@ -1,6 +1,6 @@
 .main-header {
   color: var(--text-color);
-  padding-inline: 5rem;
+  padding-inline: 8rem;
   border-bottom: var(--Background-color) solid 1px;
   background-color: var(--background-element);
 }
@@ -21,14 +21,12 @@
   font-size: 1.6rem;
   padding-inline: 1rem;
   &:hover {
-    border-radius: 4px;
-    background-color: lightgrey;
     cursor: pointer;
   }
 }
 
 .header-item {
-  padding-block: 2rem;
+  padding-block: 3rem;
 }
 
 .theme-label {

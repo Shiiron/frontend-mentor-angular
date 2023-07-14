@@ -14,7 +14,7 @@ export class CountryService {
 
   getCountries(): Observable<Country[]> {
     return this.http.get<Country[]>(
-      this.baseUrl + 'all/?fields="flags,name,population,capital,region,cioc"'
+      this.baseUrl + 'all?fields=flags,name,population,capital,region,cioc'
     );
   }
 
