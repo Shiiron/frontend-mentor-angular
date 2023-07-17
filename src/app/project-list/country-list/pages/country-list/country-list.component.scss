@@ -4,8 +4,10 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 7rem;
   padding-inline: 8rem;
-  padding-block: 8rem;
+  padding-block: 14rem;
   background-color: var(--background-color);
 }
 
-
+.list-filter {
+  grid-column: 1 / 5;
+}

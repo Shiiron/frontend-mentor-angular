@@ -17,6 +17,7 @@ import { CountryService } from './project-list/country-list/services/country.ser
 import { HttpClientModule } from '@angular/common/http';
 import { CountryListHeaderComponent } from './project-list/country-list/components/country-list-header/country-list-header.component';
 import { CountryHomeComponent } from './project-list/country-list/pages/country-home/country-home.component';
+import { CountryListFilterComponent } from './project-list/country-list/components/country-list-filter/country-list-filter.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CountryHomeComponent } from './project-list/country-list/pages/country-
     HttpClientModule,
     CountryCardComponent,
     CountryListHeaderComponent,
+    CountryListFilterComponent,
   ],
 })
 export class AppModule {}

@@ -11,8 +11,33 @@ export class CountryListComponent {
   countries: Country[] = [];
 
   constructor(private countryService: CountryService) {
+    this.getCountries();
+  }
+
+  setFilters(type: 'search' | 'region', value: string) {
+    this.countryService.setFilters(type, value);
+    this.getCountries();
+  }
+
+  getCountries() {
     this.countryService.getCountries().subscribe((countries: Country[]) => {
-      this.countries = countries;
+      if (this.countryService.filter.search !== '') {
+        let c: Country[] = [];
+
+        countries.forEach((country: Country) => {
+          if (
+            country.name.common
+              .toLocaleLowerCase()
+              .includes(this.countryService.filter.search.toLowerCase())
+          ) {
+            c.push(country);
+          }
+        });
+
+        this.countries = c;
+      } else {
+        this.countries = countries;
+      }
     });
   }
 }

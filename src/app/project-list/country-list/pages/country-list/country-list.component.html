@@ -1,4 +1,11 @@
 <div class="list-items">
+  <div class="list-filter">
+    <app-country-list-filter
+      (onSearch)="setFilters('search', $event)"
+      (onFilter)="setFilters('region', $event)"
+    ></app-country-list-filter>
+  </div>
+
   <ng-container *ngFor="let country of countries">
     <app-country-card [country]="country"></app-country-card>
   </ng-container>
