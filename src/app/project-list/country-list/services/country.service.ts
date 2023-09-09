@@ -1,33 +1,50 @@
 import { Injectable, WritableSignal, computed, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
-import { Country } from '../models/country';
+import { ICountry } from '../models/country';
 import { CountryFilter } from '../models/country-filter';
+import { take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CountryService {
   theme: WritableSignal<string> = signal('light');
+  countryList: WritableSignal<ICountry[]> = signal([]);
   filter: CountryFilter = {
     search: '',
     region: '',
   };
   baseUrl: string = 'https://restcountries.com/v3.1/';
-  fields: string = 'fields=flags,name,population,capital,region,cioc';
+  fields: string =
+    'fields=flags,name,population,capital,region,subregion,cioc,borders,tld,currencies,languages,borders';
 
   constructor(private http: HttpClient) {}
 
-  getCountries(): Observable<Country[]> {
+  getCountries(): Observable<ICountry[]> {
     let call: string = 'all';
     if (this.filter.region !== '') {
       call = 'region/' + this.filter.region;
     }
-    return this.http.get<Country[]>(this.baseUrl + `${call}?${this.fields}`);
+    return this.http.get<ICountry[]>(this.baseUrl + `${call}?${this.fields}`);
   }
 
-  getCountry(countryCode: string): Observable<Country> {
-    return this.http.get<Country>(this.baseUrl);
+  setCountrySignal(): void {
+    this.getCountries()
+      .pipe(take(1))
+      .subscribe((countries: ICountry[]) => {
+        this.countryList.set(countries);
+      });
+  }
+
+  getCountrySignal() {
+    return computed(() => this.countryList());
+  }
+
+  getCountry(countryCode: string): Observable<ICountry> {
+    return this.http.get<ICountry>(
+      `${this.baseUrl}/alpha/${countryCode}?${this.fields}`
+    );
   }
 
   setFilters(filterType: 'region' | 'search', value: string) {

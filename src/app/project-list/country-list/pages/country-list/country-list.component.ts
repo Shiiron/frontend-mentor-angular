@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Country } from '../../models/country';
+import { ICountry } from '../../models/country';
 import { CountryService } from '../../services/country.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { CountryService } from '../../services/country.service';
   styleUrls: ['./country-list.component.scss'],
 })
 export class CountryListComponent {
-  countries: Country[] = [];
+  countries: ICountry[] = [];
 
   constructor(private countryService: CountryService) {
     this.getCountries();
@@ -20,11 +20,11 @@ export class CountryListComponent {
   }
 
   getCountries() {
-    this.countryService.getCountries().subscribe((countries: Country[]) => {
+    this.countryService.getCountries().subscribe((countries: ICountry[]) => {
       if (this.countryService.filter.search !== '') {
-        let c: Country[] = [];
+        let c: ICountry[] = [];
 
-        countries.forEach((country: Country) => {
+        countries.forEach((country: ICountry) => {
           if (
             country.name.common
               .toLocaleLowerCase()

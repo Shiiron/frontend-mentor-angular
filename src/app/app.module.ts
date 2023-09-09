@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CountryListHeaderComponent } from './project-list/country-list/components/country-list-header/country-list-header.component';
 import { CountryHomeComponent } from './project-list/country-list/pages/country-home/country-home.component';
 import { CountryListFilterComponent } from './project-list/country-list/components/country-list-filter/country-list-filter.component';
+import { FlagPipe } from './project-list/country-list/pipes/flag.pipe';
+import { CountryNamePipe } from './project-list/country-list/pipes/country-name.pipe';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { CountryListFilterComponent } from './project-list/country-list/componen
     CountryCardComponent,
     CountryListHeaderComponent,
     CountryListFilterComponent,
+    FlagPipe,
+    CountryNamePipe,
   ],
 })
 export class AppModule {}

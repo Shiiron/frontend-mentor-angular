@@ -21,18 +21,25 @@ img {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   padding: 2.5rem;
+
   .country-title {
     font-weight: 800;
     font-size: 1.8rem;
     padding-block-end: 2rem;
   }
+
   .country-subinfo {
     display: grid;
     grid-template-rows: repeat(3, 2.4rem);
   }
-  span {
-    font-size: 1.4rem
+
+  .country-subinfo-value {
   }
+
+  span {
+    font-size: 1.4rem;
+  }
+
   label {
     font-weight: 600;
   }
