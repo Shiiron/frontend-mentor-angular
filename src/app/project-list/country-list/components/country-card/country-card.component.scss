@@ -10,6 +10,8 @@ img {
   display: grid;
   border-radius: 4px;
   grid-template-rows: 1fr 17rem;
+  padding-inline: 3rem;
+  padding-block-end: 3rem;
   &:hover {
     cursor: pointer;
   }
@@ -33,9 +35,6 @@ img {
     grid-template-rows: repeat(3, 2.4rem);
   }
 
-  .country-subinfo-value {
-  }
-
   span {
     font-size: 1.4rem;
   }
@@ -47,4 +46,11 @@ img {
 
 .country-flag {
   width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .country-card {
+    padding-inline: 0rem;
+    padding-block-end: 0rem;
+  }
 }

@@ -29,8 +29,7 @@ span {
 
 .country-detail-container {
   display: grid;
-  grid-template-columns: minmax(30vw, 1fr) 1fr;
-  gap: 16rem;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .country-detail {
@@ -72,4 +71,11 @@ span {
 
 .border-country-label {
   color: var(--input-color);
+}
+
+@media screen and (min-width: 900px) {
+  .country-detail-container {
+    grid-template-columns: minmax(30vw, 1fr) 1fr;
+    gap: 16rem;
+  }
 }

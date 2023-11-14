@@ -1,10 +1,14 @@
 .filter-toolbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 3.2rem;
 }
 
 .filter-left {
   position: relative;
+}
+
+.margin-bottom {
+  margin-bottom: 3rem;
 }
 
 .input-icon {
@@ -20,8 +24,8 @@ input {
   border-radius: 4px;
   padding: 2rem;
   padding-inline-start: 6rem;
-  width: 28vw;
   background-color: var(--background-element);
+  width: stretch;
   color: var(--input-color);
   &::placeholder {
     font-weight: 600;
@@ -34,6 +38,26 @@ select {
   color: var(--input-color);
   background-color: var(--background-element);
   border: none;
-  width: 10vw;
-  font-weight: 600;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 800px) {
+  .filter-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input {
+    width: 28vw;
+  }
+
+  .margin-bottom {
+    margin: 0
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+@media screen and (min-width: 1440px) {
 }
