@@ -21,30 +21,14 @@
           }}</span></span
         >
         <span
-          >Top Level Domain:
-          <span class="country-info-value">{{ country?.tld }}</span></span
-        >
-        <span
           >Population:
           <span class="country-info-value">{{
             country?.population | number
           }}</span></span
         >
         <span
-          >Currencies:
-          <span class="country-info-value">{{
-            countryCurrencies.join(", ")
-          }}</span></span
-        >
-        <span
           >Region:
           <span class="country-info-value">{{ country?.region }}</span></span
-        >
-        <span
-          >Languages:
-          <span class="country-info-value">{{
-            countryLanguages.join(", ")
-          }}</span></span
         >
         <span class="full-width"
           >Sub Region:
@@ -53,6 +37,22 @@
         <span class="full-width"
           >Capital:
           <span class="country-info-value">{{ country?.capital }}</span></span
+        >
+        <span class="subinfo-mobile-spacing"
+          >Top Level Domain:
+          <span class="country-info-value">{{ country?.tld }}</span></span
+        >
+        <span class="subinfo-currencie"
+          >Currencies:
+          <span class="country-info-value">{{
+            countryCurrencies.join(", ")
+          }}</span></span
+        >
+        <span class="subinfo-language"
+          >Languages:
+          <span class="country-info-value">{{
+            countryLanguages.join(", ")
+          }}</span></span
         >
       </div>
       <div class="border-wrapper">
