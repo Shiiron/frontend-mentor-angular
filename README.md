@@ -18,7 +18,8 @@ This project will be a compilation of all the challenges done with frontend-ment
 
 ### Links
 
-- Solution URL: [space tourism website](https://shiiron-space-tourism.netlify.app)
+- Space Tourism: [space tourism website](https://shiiron-space-tourism.netlify.app/space)
+- Country List: [country list](https://shiiron-space-tourism.netlify.app/country)
 
 ### Built with
 

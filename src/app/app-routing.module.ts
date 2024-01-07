@@ -34,6 +34,8 @@ const routes: Routes = [
     ],
   },
   { path: '', redirectTo: '/projects', pathMatch: 'full' },
+  { path: 'country', redirectTo: '/country-list/list', pathMatch: 'full' },
+  { path: 'space', redirectTo: '/home/main', pathMatch: 'full' },
 ];
 
 @NgModule({
