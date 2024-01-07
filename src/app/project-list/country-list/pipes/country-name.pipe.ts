@@ -10,7 +10,11 @@ export class CountryNamePipe implements PipeTransform {
   countries: Signal<ICountry[]> = this.countryService.getCountrySignal();
   constructor(private countryService: CountryService) {}
   transform(value: string): unknown {
-    return this.countries().find((country: ICountry) => country.cioc === value)
+    console.log(value);
+    console.log(
+      this.countries().find((country: ICountry) => country.cca3 === value)
+    );
+    return this.countries().find((country: ICountry) => country.cca3 === value)
       ?.name.common;
   }
 }

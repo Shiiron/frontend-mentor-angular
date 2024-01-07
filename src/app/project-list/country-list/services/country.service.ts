@@ -17,7 +17,7 @@ export class CountryService {
   };
   baseUrl: string = 'https://restcountries.com/v3.1/';
   fields: string =
-    'fields=flags,name,population,capital,region,subregion,cioc,borders,tld,currencies,languages,borders';
+    'fields=flags,name,population,capital,region,subregion,cca3,borders,tld,currencies,languages,borders';
 
   constructor(private http: HttpClient) {}
 

@@ -9,7 +9,7 @@ export interface ICountry {
   };
   region: string;
   subregion: string;
-  cioc: string;
+  cca3: string;
   tld: string[];
   currencies: { [key: string]: { name: string; symbol: string } };
   languages: { [key: string]: string };
