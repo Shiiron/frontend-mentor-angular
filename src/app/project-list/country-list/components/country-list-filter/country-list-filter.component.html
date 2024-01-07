@@ -1,0 +1,19 @@
+<div class="filter-toolbar">
+  <div class="filter-left">
+    <i class="fa-solid fa-magnifying-glass input-icon"></i>
+    <input
+      type="text"
+      class="input-search"
+      [(ngModel)]="search"
+      (ngModelChange)="searchChanged($event)"
+      placeholder="Search for a country..."
+    />
+  </div>
+  <div class="filter-right margin-bottom">
+    <select [(ngModel)]="filter" (ngModelChange)="filterChanged($event)">
+      <ng-container *ngFor="let option of filterOptions">
+        <option value="{{ option.value }}">{{ option.label }}</option>
+      </ng-container>
+    </select>
+  </div>
+</div>

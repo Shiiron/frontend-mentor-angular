@@ -1,0 +1,43 @@
+body {
+  --text-color: hsl(200, 15%, 8%);
+  --background-color: hsl(0, 0%, 98%);
+  --item-color: hsl(0, 0%, 100%);
+  --input-color: hsl(0, 0%, 52%);
+  --background-element: hsl(0, 0%, 100%);
+  --button-shadow: hsl(0, 0%, 52%);
+  background-color: var(--background-color);
+}
+
+body.dark {
+  --text-color: hsl(0, 0%, 100%);
+  --background-color: hsl(207, 26%, 17%);
+  --item-color: hsl(209, 23%, 22%);
+  --input-color: hsl(0, 0%, 100%);
+  --background-element:hsl(209, 23%, 22%);
+  --button-shadow: hsl(0, 100%, 0%);
+}
+
+button {
+  cursor: pointer;
+}
+
+.font-nunito-sans {
+  font-family: "Nunito sans";
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.input-color {
+
+}
+
+@media screen and (min-width: 800px) {
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+@media screen and (min-width: 1440px) {
+}

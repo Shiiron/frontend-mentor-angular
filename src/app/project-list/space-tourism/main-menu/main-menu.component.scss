@@ -92,7 +92,7 @@
     display: block;
     position: absolute;
     background-color: transparent;
-    background-image: url("../../assets/img/shared/icon-hamburger.svg");
+    background-image: url("../../../../assets/img/shared/icon-hamburger.svg");
     width: 2.6rem;
     border: 0;
     background-repeat: no-repeat;
@@ -103,7 +103,7 @@
   }
 
   .mobile-nav-toggle[nav-expanded="expanded"] {
-    background-image: url("../../assets/img/shared/icon-close.svg");
+    background-image: url("../../../../assets/img/shared/icon-close.svg");
   }
 }
 

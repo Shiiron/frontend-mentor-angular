@@ -1,0 +1,69 @@
+<div class="country-detail">
+  <div style="margin-bottom: 8rem">
+    <button class="button" routerLink="../list">
+      <i class="fas fa-arrow-left"></i>
+      <span class="margin-l-3">Back</span>
+    </button>
+  </div>
+
+  <div class="country-detail-container">
+    <div class="country-image">
+      <img src="{{ country?.flags | flag }}" />
+    </div>
+
+    <div class="country-detail-infos">
+      <span class="country-title text-color">{{ country?.name?.common }}</span>
+      <div class="country-subinfo">
+        <span
+          >Native Name:
+          <span class="country-info-value">{{
+            countryNativeNames.join(", ")
+          }}</span></span
+        >
+        <span
+          >Population:
+          <span class="country-info-value">{{
+            country?.population | number
+          }}</span></span
+        >
+        <span
+          >Region:
+          <span class="country-info-value">{{ country?.region }}</span></span
+        >
+        <span class="full-width"
+          >Sub Region:
+          <span class="country-info-value">{{ country?.subregion }}</span></span
+        >
+        <span class="full-width"
+          >Capital:
+          <span class="country-info-value">{{ country?.capital }}</span></span
+        >
+        <span class="subinfo-mobile-spacing"
+          >Top Level Domain:
+          <span class="country-info-value">{{ country?.tld }}</span></span
+        >
+        <span class="subinfo-currencie"
+          >Currencies:
+          <span class="country-info-value">{{
+            countryCurrencies.join(", ")
+          }}</span></span
+        >
+        <span class="subinfo-language"
+          >Languages:
+          <span class="country-info-value">{{
+            countryLanguages.join(", ")
+          }}</span></span
+        >
+      </div>
+      <div class="border-wrapper">
+        <span>Border Countries: </span>
+        <span
+          class="country-border margin-r-1 button"
+          *ngFor="let country of country?.borders"
+        >
+          {{ country | countryName }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

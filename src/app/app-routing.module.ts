@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CrewComponent } from './crew/crew.component';
-import { DestinationComponent } from './destination/destination.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { TechnologyComponent } from './technology/technology.component';
 import { ProjectListComponent } from './project-list/project-list.component';
-import { HomeComponent } from './home/home.component';
+import { MainPageComponent } from './project-list/space-tourism/main-page/main-page.component';
+import { HomeComponent } from './project-list/space-tourism/home/home.component';
+import { DestinationComponent } from './project-list/space-tourism/destination/destination.component';
+import { CrewComponent } from './project-list/space-tourism/crew/crew.component';
+import { TechnologyComponent } from './project-list/space-tourism/technology/technology.component';
+import { CountryListComponent } from './project-list/country-list/pages/country-list/country-list.component';
+import { CountryDetailComponent } from './project-list/country-list/pages/country-detail/country-detail.component';
+import { CountryHomeComponent } from './project-list/country-list/pages/country-home/country-home.component';
 
 const routes: Routes = [
   { path: 'projects', component: ProjectListComponent },
@@ -17,6 +20,17 @@ const routes: Routes = [
       { path: 'destination', component: DestinationComponent },
       { path: 'crew', component: CrewComponent },
       { path: 'technology', component: TechnologyComponent },
+    ],
+  },
+  {
+    path: 'country-list',
+    component: CountryHomeComponent,
+    children: [
+      { path: 'list', component: CountryListComponent },
+      {
+        path: ':countryCode',
+        component: CountryDetailComponent,
+      },
     ],
   },
   { path: '', redirectTo: '/projects', pathMatch: 'full' },

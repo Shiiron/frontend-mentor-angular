@@ -1,0 +1,24 @@
+<div class="country-card" routerLink="../{{ country?.cca3 }}">
+  <img src="{{ country?.flags | flag }}" />
+  <div class="country-infos">
+    <h3 class="country-title">{{ country?.name?.common }}</h3>
+    <div class="country-subinfo">
+      <span
+        ><label>Population: </label>
+        <span class="country-subinfo-value">{{
+          country?.population | number
+        }}</span></span
+      >
+      <span
+        ><label>Region: </label>
+        <span class="country-subinfo-value">{{ country?.region }}</span></span
+      >
+      <span
+        ><label>Capital: </label>
+        <span class="country-subinfo-value">{{
+          country?.capital?.join(",")
+        }}</span></span
+      >
+    </div>
+  </div>
+</div>

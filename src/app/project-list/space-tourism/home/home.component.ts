@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   constructor(private router: Router) {}
+
   getBackground() {
-    console.log(this.router.url);
     switch (this.router.url) {
       case '/destination':
         return 'background--destination';
