@@ -1,9 +1,4 @@
 @import "./assets/reset.scss";
-@import './assets/country_list.scss';
-
-/********************************
-    Country List
-********************************/
 
 html {
   height: 100%;
@@ -186,16 +181,14 @@ img {
     column-gap: 4rem;
     text-align: left;
     grid-template-columns:
-      minmax(1rem, 1fr)
-      repeat(2, minmax(0, 50rem))
-      minmax(1rem, 1fr);
+      minmax(1rem, 1fr) repeat(2, minmax(0, 50rem)) minmax(1rem, 1fr);
   }
 
-  .grid-container > *:first-child {
+  .grid-container>*:first-child {
     grid-column: 2;
   }
 
-  .grid-container > *:last-child {
+  .grid-container>*:last-child {
     grid-column: 3;
   }
 
@@ -261,4 +254,3 @@ img {
     margin-right: 1rem;
   }
 }
-
