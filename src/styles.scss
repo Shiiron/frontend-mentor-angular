@@ -1,9 +1,4 @@
 @import "./assets/reset.scss";
-@import './assets/country_list.scss';
-
-/********************************
-    Country List
-********************************/
 
 html {
   height: 100%;
@@ -141,40 +136,6 @@ img {
   background-position: center center;
 }
 
-.background--main {
-  background-image: url("./assets/img/home/background-home-mobile.jpg");
-}
-
-.background--destination {
-  background-image: url("./assets/img/destination/background-destination-mobile.jpg");
-}
-
-.background--crew {
-  background-image: url("./assets/img/crew/background-crew-mobile.jpg");
-}
-
-.background--technology {
-  background-image: url("./assets/img/technology/background-technology-mobile.jpg");
-}
-
-@media (min-width: 35em) {
-  .background--main {
-    background-image: url("./assets/img/home/background-home-tablet.jpg");
-  }
-
-  .background--destination {
-    background-image: url("./assets/img/destination/background-destination-tablet.jpg");
-  }
-
-  .background--crew {
-    background-image: url("./assets/img/crew/background-crew-tablet.jpg");
-  }
-
-  .background--technology {
-    background-image: url("./assets/img/technology/background-technology-tablet.jpg");
-  }
-}
-
 @media (min-width: 35em) and (max-width: 55em) {
   .grid-container * {
     max-width: 80ch;
@@ -186,16 +147,14 @@ img {
     column-gap: 4rem;
     text-align: left;
     grid-template-columns:
-      minmax(1rem, 1fr)
-      repeat(2, minmax(0, 50rem))
-      minmax(1rem, 1fr);
+      minmax(1rem, 1fr) repeat(2, minmax(0, 50rem)) minmax(1rem, 1fr);
   }
 
-  .grid-container > *:first-child {
+  .grid-container>*:first-child {
     grid-column: 2;
   }
 
-  .grid-container > *:last-child {
+  .grid-container>*:last-child {
     grid-column: 3;
   }
 
@@ -240,25 +199,39 @@ img {
     line-height: 3.2rem;
   }
 
-  .background--main {
-    background-image: url("./assets/img/home/background-home-desktop.jpg");
-  }
-
-  .background--destination {
-    background-image: url("./assets/img/destination/background-destination-desktop.jpg");
-  }
-
-  .background--crew {
-    background-image: url("./assets/img/crew/background-crew-desktop.jpg");
-  }
-
-  .background--technology {
-    background-image: url("./assets/img/technology/background-technology-desktop.jpg");
-  }
-
   /**LAYOUT / SPACING**/
   .margin-r-1 {
     margin-right: 1rem;
   }
 }
 
+body {
+  --text-color: hsl(200, 15%, 8%);
+  --background-color: hsl(0, 0%, 98%);
+  --item-color: hsl(0, 0%, 100%);
+  --input-color: hsl(0, 0%, 52%);
+  --background-element: hsl(0, 0%, 100%);
+  --button-shadow: hsl(0, 0%, 52%);
+  background-color: var(--background-color);
+}
+
+body.dark {
+  --text-color: hsl(0, 0%, 100%);
+  --background-color: hsl(207, 26%, 17%);
+  --item-color: hsl(209, 23%, 22%);
+  --input-color: hsl(0, 0%, 100%);
+  --background-element: hsl(209, 23%, 22%);
+  --button-shadow: hsl(0, 100%, 0%);
+}
+
+button {
+  cursor: pointer;
+}
+
+.font-nunito-sans {
+  font-family: "Nunito sans";
+}
+
+.text-color {
+  color: var(--text-color);
+}

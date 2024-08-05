@@ -43,7 +43,7 @@ export class CountryService {
 
   getCountry(countryCode: string): Observable<ICountry> {
     return this.http.get<ICountry>(
-      `${this.baseUrl}/alpha/${countryCode}?${this.fields}`
+      `${this.baseUrl}alpha/${countryCode}?${this.fields}`
     );
   }
 
