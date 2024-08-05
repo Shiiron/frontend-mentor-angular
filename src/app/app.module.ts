@@ -1,4 +1,4 @@
-import { HttpClientModule } from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "./app-routing.module";
@@ -15,24 +15,17 @@ import { CountryService } from "./services/country.service";
 
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    CountryListComponent,
-    CountryDetailComponent,
-    CountryHomeComponent,
-  ],
-  providers: [CountryService],
-  bootstrap: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    CountryCardComponent,
-    CountryListHeaderComponent,
-    CountryListFilterComponent,
-    FlagPipe,
-    CountryNamePipe,
-  ],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        CountryListComponent,
+        CountryDetailComponent,
+        CountryHomeComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        CountryCardComponent,
+        CountryListHeaderComponent,
+        CountryListFilterComponent,
+        FlagPipe,
+        CountryNamePipe], providers: [CountryService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
