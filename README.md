@@ -1,35 +1,27 @@
-# Frontend Mentor - Project Solutions
+# Main
 
-This project will be a compilation of all the challenges done with frontend-mentor :
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
-- [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3)
-- [REST Countries API with color theme switcher](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
+## Development server
 
-## Table of contents
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-- [Overview](#overview)
-  - [Links](#links)
-  - [Built with](#built-with)
-- [Author](#author)
+## Code scaffolding
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Overview
+## Build
 
-### Links
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-- Space Tourism: [space tourism website](https://shiiron-space-tourism.netlify.app/space)
-- Country List: [country list](https://shiiron-space-tourism.netlify.app/country)
+## Running unit tests
 
-### Built with
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-- HTML
-- CSS Grid and Flexbox
-- Figma
-- Typescript
-- Mobile-first workflow
-- [Angular](https://angular.io/) - Angular 11
+## Running end-to-end tests
 
-## Author
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-- Frontend Mentor - [@Shiiron](https://www.frontendmentor.io/profile/Shiiron)
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
