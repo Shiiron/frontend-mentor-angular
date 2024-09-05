@@ -1,4 +1,5 @@
 @import "./assets/reset.scss";
+@import "./assets/keyframes.scss";
 
 html {
   height: 100%;
@@ -9,6 +10,7 @@ html {
 body {
   min-height: 100vh;
   display: grid;
+  background-color: black;
 }
 
 img {

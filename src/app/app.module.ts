@@ -3,13 +3,13 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { CrewComponent } from "./crew/crew.component";
-import { DestinationComponent } from "./destination/destination.component";
-import { HomeComponent } from "./home/home.component";
-import { MainMenuComponent } from "./main-menu/main-menu.component";
-import { MainPageComponent } from "./main-page/main-page.component";
-import { DataService } from "./services/data.service";
-import { TechnologyComponent } from "./technology/technology.component";
+import { HomeComponent } from "./pages/home/home.component";
+import { MainPageComponent } from "./pages/main-page/main-page.component";
+import { dataService } from "./services/data.service";
+import { MainMenuComponent } from "./components/main-menu/main-menu.component";
+import { CrewComponent } from "./pages/crew/crew.component";
+import { DestinationComponent } from "./pages/destination/destination.component";
+import { TechnologyComponent } from "./pages/technology/technology.component";
 
 
 @NgModule({ declarations: [
@@ -22,5 +22,5 @@ import { TechnologyComponent } from "./technology/technology.component";
         HomeComponent,
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
-        AppRoutingModule], providers: [DataService, provideHttpClient(withInterceptorsFromDi())] })
+        AppRoutingModule], providers: [dataService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

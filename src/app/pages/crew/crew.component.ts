@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Crew } from '../models/crew';
-import { DataService } from '../services/data.service';
+import { Crew } from 'src/app/models/crew';
+import { dataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-crew',
@@ -11,7 +11,7 @@ export class CrewComponent implements OnInit {
   crew: Crew[] = [];
   selectedCrew: Crew;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: dataService) {
     this.selectedCrew = this.crew[0];
   }
 

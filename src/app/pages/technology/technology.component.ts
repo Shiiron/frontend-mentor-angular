@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
-import { Technology } from '../models/technology';
+import { Technology } from 'src/app/models/technology';
+import { dataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-technology',
@@ -11,7 +11,7 @@ export class TechnologyComponent implements OnInit {
   technologies: Technology[] = [];
   selectedTechnology: Technology;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: dataService) {
     this.selectedTechnology = this.technologies[0];
   }
 

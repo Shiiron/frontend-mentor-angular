@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Destination } from '../models/destination';
-import { DataService } from '../services/data.service';
+import { Destination } from 'src/app/models/destination';
+import { dataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-destination',
@@ -11,7 +11,7 @@ export class DestinationComponent implements OnInit {
   destinations: Destination[] = [];
   selectedDestination: Destination;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: dataService) {
     this.selectedDestination = this.destinations[0];
   }
 

@@ -120,7 +120,7 @@ const data = {
 };
 
 @Injectable()
-export class DataService {
+export class dataService {
   getCrewList(): Crew[] {
     return data['crew'];
   }

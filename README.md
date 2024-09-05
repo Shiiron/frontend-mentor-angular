@@ -28,7 +28,7 @@ This project will be a compilation of all the challenges done with frontend-ment
 - Figma
 - Typescript
 - Mobile-first workflow
-- [Angular](https://angular.io/) - Angular 11
+- [Angular](https://angular.io/) - Angular 11 (updated to angular 18)
 
 ## Author
 

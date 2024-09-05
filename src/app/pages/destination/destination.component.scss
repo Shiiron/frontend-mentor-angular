@@ -10,6 +10,7 @@
 .destination-nav {
   justify-content: center;
   margin-bottom: 2rem;
+
   li {
     font-size: 1.4rem;
     line-height: 1.7rem;
@@ -26,6 +27,7 @@
 .destination--description {
   max-width: 50ch;
   padding-inline: 1.6rem;
+  min-height: 150px;
 }
 
 .separator {
@@ -69,13 +71,16 @@
     letter-spacing: 0.27rem;
     border: 0;
     color: hsl(0 0% 100% / 1);
+
     li {
       padding-block: 0 2rem;
       cursor: pointer;
+
       &:not(.destination-active):hover {
         border-bottom: 0.5rem solid hsl(0 0% 100% / 0.5);
         border-color: hsl(0 0% 100% / 0.5);
       }
+
       gap: 4rem;
       font-size: 1.6rem;
       line-height: 1.9rem;
